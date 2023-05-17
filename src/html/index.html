@@ -7,10 +7,84 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Консул</title>
 	<link rel="stylesheet" href="/css/main.css">
+	<style>
+		.container {
+			margin: 0 auto;
+			width: 80%;
+		}
+
+		.header_content {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.header_content_logo {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+		}
+
+		.header_content_phone {
+			display: flex;
+		}
+
+		.header_content_phone_desc {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.header_content_phone img {
+			width: 50px;
+			height: 50px;
+		}
+
+		.header_content_address {
+			display: flex;
+		}
+
+		.header_content_address_text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.header_content_address_text img {
+			width: 50px;
+			height: 50px;
+		}
+
+	</style>
 </head>
 <body>
-<div class="app">
-	Консул
+<div class="container">
+	<header class="header">
+		<div class="header_content">
+			<div class="header_content_logo">
+				<img src="/img/logo-image.png" alt="logo">
+				<p>Консул</p>
+			</div>
+			<div class="header_content_phone">
+				<div class="header_content_phone_logo">
+					<img src="/img/phone-image.svg" alt="phone">
+				</div>
+				<div class="header_content_phone_desc">
+					<p>Телефон для связи</p>
+					<a href="tel:+79187347481">+7 (918) 734-74-81</a>
+					<a href="tel:+79883043183">+7 (988) 304-31-83</a>
+				</div>
+			</div>
+			<div class="header_content_address">
+				<img src="/img/address-image.svg" alt="address">
+				<div class="header_content_address_text">
+					<p>адрес</p>
+					<a href="#">
+						г. Москва , Киевское ш. 22 км, влад. 4,<br> с. 2  Бизнес парк "Румянцево"
+					</a>
+				</div>
+				<button class="header_content_address_button">Заказать звонок</button>
+			</div>
+		</div>
+		<div class="header-menu"></div>
+	</header>
 </div>
 </body>
 </html>
