@@ -8,24 +8,55 @@
 	<title>Консул</title>
 	<link rel="stylesheet" href="/css/main.css">
 	<style>
+
+		.header {
+			display: block;
+			width: 100%;
+			background-color: #bebebe;
+		}
+
 		.container {
-			margin: 0 auto;
+			display: block;
 			width: 80%;
+			margin: 0 auto;
 		}
 
 		.header_content {
 			display: flex;
 			justify-content: space-between;
+			padding: 10px 0;
 		}
 
-		.header_content_logo {
+		.header_content_logo, .header_content_address, .header_content_phone {
 			display: flex;
-			gap: 20px;
-			align-items: center;
+			gap: 10px;
 		}
 
-		.header_content_phone {
+		.header_content_logo img {
+			width: 50px;
+		}
+
+		.header_content_logo_desc {
 			display: flex;
+			flex-direction: column;
+		}
+
+		.header_content_logo_desc p:first-child {
+			font-size: 22px;
+			color: #5f0614;
+		}
+
+		.header_content_logo_desc p:last-child {
+			font-size: 18px;
+			font-weight: 600;
+			color: #000000;
+			text-decoration: none;
+			transition: .5s;
+			cursor: pointer;
+		}
+
+		.header_content_logo_desc p:last-child:hover {
+			color: #5f0614;
 		}
 
 		.header_content_phone_desc {
@@ -33,13 +64,51 @@
 			flex-direction: column;
 		}
 
-		.header_content_phone img {
-			width: 50px;
-			height: 50px;
+		.header_content_phone_desc p {
+			font-size: 22px;
+			color: #5f0614;
 		}
 
-		.header_content_address {
-			display: flex;
+		.header_content_phone_desc a {
+			font-size: 18px;
+			font-weight: 600;
+			color: #000000;
+			text-decoration: none;
+			transition: .5s;
+		}
+
+		.header_content_phone_desc a:hover {
+			color: #5f0614;
+		}
+
+		.header_content_address_text p {
+			font-size: 22px;
+			color: #5f0614;
+		}
+
+		.header_content_address_text a {
+			font-size: 18px;
+			font-weight: 600;
+			color: #000000;
+			text-decoration: none;
+			transition: .5s;
+		}
+
+		.header_content_address_text a:hover {
+			color: #5f0614;
+		}
+
+		.header_content_button {
+			padding: 5px 13px;
+			cursor: pointer;
+			height: 50px;
+			width: 155px;
+			color: #fff;
+			border: 1px solid #5f0614;
+			border-radius: 5px;
+			background-color: #5f0614;
+			font-size: 16px;
+			margin-top: 12px;
 		}
 
 		.header_content_address_text {
@@ -52,39 +121,87 @@
 			height: 50px;
 		}
 
+
+		/*-------media--------*/
+
+		@media(max-width: 1420px) {
+			.container {
+				width: 90%;
+			}
+		}
+
+		@media(max-width: 1130px) {
+			.header_content {
+				flex-wrap: wrap;
+				justify-content: start;
+			}
+		}
+
+		@media(max-width: 1090px) {
+			.header_content div:not(:first-child), button {
+				margin-top: 20px;
+			}
+
+			.header_content {
+				flex-direction: column;
+			}
+
+			.header_content_logo, .header_content_address, .header_content_phone {
+				align-items: baseline;
+			}
+		}
+
+		@media(max-width: 915px) {
+			.header_content_address {
+				align-items: baseline;
+			}
+
+			.header_content_logo {
+				gap: 10px;
+				align-items: baseline;
+			}
+
+			}
+			.header_content_logo img {
+				width: 25px;
+			}
+
+			.header_content_button {
+				margin: 20px 0 0 33px;
+		}
 	</style>
 </head>
 <body>
-<div class="container">
-	<header class="header">
-		<div class="header_content">
-			<div class="header_content_logo">
-				<img src="/img/logo-image.png" alt="logo">
+<header class="header">
+	<div class="header_content container">
+		<div class="header_content_logo">
+			<img src="/img/logo-image.png" alt="logo">
+			<div class="header_content_logo_desc">
 				<p>Консул</p>
-			</div>
-			<div class="header_content_phone">
-				<div class="header_content_phone_logo">
-					<img src="/img/phone-image.svg" alt="phone">
-				</div>
-				<div class="header_content_phone_desc">
-					<p>Телефон для связи</p>
-					<a href="tel:+79187347481">+7 (918) 734-74-81</a>
-					<a href="tel:+79883043183">+7 (988) 304-31-83</a>
-				</div>
-			</div>
-			<div class="header_content_address">
-				<img src="/img/address-image.svg" alt="address">
-				<div class="header_content_address_text">
-					<p>адрес</p>
-					<a href="#">
-						г. Москва , Киевское ш. 22 км, влад. 4,<br> с. 2  Бизнес парк "Румянцево"
-					</a>
-				</div>
-				<button class="header_content_address_button">Заказать звонок</button>
+				<p>Юридическая компания</p>
 			</div>
 		</div>
-		<div class="header-menu"></div>
-	</header>
-</div>
+		<div class="header_content_phone">
+			<div class="header_content_phone_logo">
+				<img src="/img/phone-image.svg" alt="phone">
+			</div>
+			<div class="header_content_phone_desc">
+				<p>Телефон для связи</p>
+				<a href="tel:+79187347481">+7 (918) 734-74-81</a>
+			</div>
+		</div>
+		<div class="header_content_address">
+			<img src="/img/address-image.svg" alt="address">
+			<div class="header_content_address_text">
+				<p>Адрес</p>
+				<a href="#">
+					г. Москва , Киевское ш. 22 км, влад. 4,<br> с. 2  Бизнес парк "Румянцево"
+				</a>
+			</div>
+		</div>
+		<button class="header_content_button">Заказать звонок</button>
+	</div>
+	<div class="header-menu"></div>
+</header>
 </body>
 </html>
