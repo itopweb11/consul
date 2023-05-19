@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Консул</title>
 	<link rel="stylesheet" href="/css/main.css">
+
 	<style>
 
 		.header {
@@ -109,6 +109,12 @@
 			background-color: #5f0614;
 			font-size: 16px;
 			margin-top: 12px;
+			transition: .5s;
+		}
+
+		.header_content_button:hover {
+			background-color: #97182c;
+			border-color: #97182c;
 		}
 
 		.header_content_address_text {
@@ -119,6 +125,32 @@
 		.header_content_address_text img {
 			width: 50px;
 			height: 50px;
+		}
+
+		.header_menu {
+			width: 100%;
+			background-color: #5f0614;
+		}
+
+		.header_menu_data {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			height: 60px;
+			align-items: center;
+		}
+
+		.header_menu_data a {
+			font-size: 16px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #FFFFFF;
+			padding: 20.2px;
+			transition: .5s;
+		}
+
+		.header_menu_data a:hover {
+			background-color: #97182c;
 		}
 
 
@@ -203,7 +235,14 @@
 		</div>
 		<button class="header_content_button">Заказать звонок</button>
 	</div>
-	<div class="header-menu"></div>
+	<div class="header_menu">
+		<div class="header_menu_data container">
+			<a href="#">Главная</a>
+			<a href="#">Общегражданские дела</a>
+			<a href="#">Арбитраж</a>
+			<a href="#">Контакты</a>
+		</div>
+	</div>
 </header>
 </body>
 </html>
