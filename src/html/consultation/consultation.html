@@ -1,0 +1,84 @@
+<style>
+    .consultation {
+        width: 100%;
+        min-height: 320px;
+        background-color: #2b272c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .consultation__title {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: auto;
+        color: #FFFFFF;
+    }
+
+    .consultation__form {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .consultation__form_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .consultation__form_desc {
+        max-width: 636px;
+        width: 100%;
+        min-height: 150px;
+        padding: 0 20px;
+        border: none;
+        font-size: 18px;
+        outline:none;
+        text-align: start;
+    }
+
+    .consultation__form_inputs input, button {
+        min-height: 46px;
+        max-width: 636px;
+        width: 100%;
+    }
+
+    .consultation__form_inputs button {
+        transition: .5s;
+        text-align: center;
+        color: #fff;
+        border: 1px solid #5f0614;
+        background-color: #5f0614;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .consultation__form_inputs button:hover {
+        background-color: #a3051e;
+    }
+
+    .consultation__form_inputs input {
+        padding: 0 20px;
+        border: none;
+        font-size: 18px;
+        outline:none;
+    }
+</style>
+
+<div class="consultation">
+    <h1 class="consultation__title">Заказать консультацию</h1>
+    <div class="consultation__form container">
+        <div class="consultation__form_inputs">
+            <input type="text" placeholder="Ваше имя">
+            <input type="number" placeholder="Ваш телефон">
+            <button>отправить</button>
+        </div>
+        <input class="consultation__form_desc" type="text" placeholder="Ваше сообщение">
+    </div>
+</div>
