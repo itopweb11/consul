@@ -139,16 +139,19 @@
 
     /*-------media--------*/
 
-    @media(max-width: 1420px) {
-        .container {
-            width: 90%;
-        }
-    }
-
     @media(max-width: 1130px) {
         .header_content {
             flex-wrap: wrap;
             justify-content: start;
+        }
+
+        .header_content_img {
+            display: none;
+        }
+
+        .header_content_logo, .header_content_address, .header_content_phone {
+            display: flex;
+            gap: 0;
         }
     }
 
@@ -164,10 +167,6 @@
         .header_content {
             flex-direction: column;
         }
-
-        .header_content_logo, .header_content_address, .header_content_phone {
-            align-items: baseline;
-        }
     }
 
     @media(max-width: 915px) {
@@ -177,13 +176,7 @@
         }
 
         .header_content_logo {
-            gap: 10px;
             align-items: baseline;
-        }
-
-        .header_content_button {
-            margin: 20px 0 0 33px;
-
         }
 
         .header_content_address_text a, .header_content_phone_desc a, .header_content_logo_desc p:last-child {
@@ -195,11 +188,11 @@
         .header_menu_data {
             flex-direction: column;
             align-items: start;
-            padding-left: 24px;
         }
 
         .header_menu_data a {
             padding: 10px;
+            margin-left: -10px;
         }
     }
 </style>
@@ -207,7 +200,7 @@
 <header class="header">
     <div class="header_content container">
         <div class="header_content_logo">
-            <img src="/img/logo-image.png" alt="logo">
+            <img class="header_content_img" src="/img/logo-image.png" alt="logo">
             <div class="header_content_logo_desc">
                 <p>Консул</p>
                 <p>Юридическая компания</p>
@@ -215,7 +208,7 @@
         </div>
         <div class="header_content_phone">
             <div class="header_content_phone_logo">
-                <img src="/img/phone-image.svg" alt="phone">
+                <img class="header_content_img" src="/img/phone-image.svg" alt="phone">
             </div>
             <div class="header_content_phone_desc">
                 <p>Телефон для связи</p>
@@ -223,7 +216,7 @@
             </div>
         </div>
         <div class="header_content_address">
-            <img src="/img/address-image.svg" alt="address">
+            <img class="header_content_img" src="/img/address-image.svg" alt="address">
             <div class="header_content_address_text">
                 <p>Адрес</p>
                 <a href="#">
