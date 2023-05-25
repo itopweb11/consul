@@ -1,0 +1,191 @@
+<style>
+    .servicesBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicesBlock__title {
+        margin-top: 50px;
+        text-align: center;
+        cursor: context-menu;
+    }
+
+    .servicesBlock__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .servicesBlock__item {
+        max-width: 640px;
+        min-height: 500px;
+        margin-top: 50px;
+    }
+
+    .servicesBlock__item img {
+        height: 260px;
+        max-width: 660px;
+        width: 100%;
+    }
+
+    .servicesBlock__item_desc {
+        min-height: 227px;
+        background-color: #2b272c;
+        margin-top: -4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 55px;
+        transition: .5s;
+    }
+
+    .servicesBlock__item_desc:hover {
+        background-color: #5f0614;
+    }
+
+    .servicesBlock__item_desc h1 {
+        font-size: 30px;
+        color: #FFFFFF;
+        font-weight: 500;
+        text-align: center;
+        cursor: context-menu;
+    }
+
+    .servicesBlock__item_desc p {
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+        font-size: 16px;
+        cursor: context-menu;
+    }
+
+    .servicesBlock__item_desc button {
+        margin-top: 20px;
+        padding: 15px 20px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .servicesBlock__item_desc button:hover {
+        background-color: #8f0017;
+        color: #fff;
+        border: 1px solid white;
+    }
+
+    /*-------media--------*/
+
+    @media(max-width: 1430px) {
+        .servicesBlock__items {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media(max-width: 600px) {
+        .servicesBlock__item img {
+            height: 220px;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .servicesBlock__title {
+            margin-top: 30px;
+            font-size: 27px;
+        }
+
+        .servicesBlock__item {
+            margin-top: 40px;
+        }
+
+        .servicesBlock__item {
+            max-width: 450px;
+        }
+    }
+
+    @media(max-width: 400px) {
+        .servicesBlock__item {
+            max-width: 300px;
+        }
+
+        .servicesBlock__item {
+            min-height: 400px;
+        }
+
+        .servicesBlock__item img {
+            height: 160px;
+        }
+
+        .servicesBlock__item_desc {
+            padding: 20px;
+        }
+
+        .servicesBlock__item_desc h1 {
+            font-size: 25px;
+        }
+
+        .servicesBlock__item_desc p {
+            font-size: 15px;
+        }
+
+        .servicesBlock__item_desc button {
+            padding: 10px 15px;
+        }
+    }
+</style>
+
+<div class="servicesBlock container">
+    <h1 class="servicesBlock__title">Оказываемые услуги</h1>
+    <div class="servicesBlock__items">
+        <div class="servicesBlock__item">
+            <img src="/img/servicesBlock-image-1.jpg" alt="servicesBlock">
+            <div class="servicesBlock__item_desc">
+                <h1>Общегражданские дела</h1>
+                <p>
+                    Направления: гражданское, семейное, жилищное, трудовое,
+                    земельное или иное право. Также вопросы
+                    по частного строительства и недвижимости.
+                </p>
+                <button>подробнее</button>
+            </div>
+        </div>
+        <div class="servicesBlock__item">
+            <img src="/img/servicesBlock-image-2.jpg" alt="servicesBlock">
+            <div class="servicesBlock__item_desc">
+                <h1>Подготовка документов </h1>
+                <p>
+                    Направления: гражданское, семейное, жилищное, трудовое,
+                    земельное или иное право. Также вопросы
+                    по частного строительства и недвижимости.
+                </p>
+                <button>подробнее</button>
+            </div>
+        </div>
+        <div class="servicesBlock__item">
+            <img src="/img/servicesBlock-image-3.jpg" alt="servicesBlock">
+            <div class="servicesBlock__item_desc">
+                <h1>Арбитраж</h1>
+                <p>
+                    Защита прав и законных интересов лиц, осуществляющих
+                    предпринимательскую и иную экономическую деятельность.
+                    Ведение банкротного производства.
+                </p>
+                <button>подробнее</button>
+            </div>
+        </div>
+        <div class="servicesBlock__item">
+            <img src="/img/servicesBlock-image-4.jpg" alt="servicesBlock">
+            <div class="servicesBlock__item_desc">
+                <h1>Консультирование</h1>
+                <p>
+                    Направления: гражданское, семейное, жилищное, трудовое,
+                    земельное или иное право. Также вопросы
+                    по частного строительства и недвижимости.
+                </p>
+                <button>подробнее</button>
+            </div>
+        </div>
+    </div>
+</div>
