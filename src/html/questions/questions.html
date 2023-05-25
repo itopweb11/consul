@@ -1,0 +1,70 @@
+<style>
+    .questions {
+        width: 100%;
+        min-height: 320px;
+        background: linear-gradient( rgb(30 30 30 / 80%), rgb(0 0 0 / 50%) ), url("/img/promo-image.jpg") center no-repeat;
+        margin-top: 50px;
+    }
+
+    .questions__item {
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .questions__item_title {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: auto;
+        color: #b3021c;
+    }
+
+    .questions__item_desc {
+        color: #d1d1d1;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .questions__item_phone {
+        font-weight: 700;
+        font-family: inherit;
+        font-size: 25px;
+        cursor: pointer;
+        color: #fff;
+        margin-top: 20px;
+        text-decoration: none;
+        transition: .5s;
+    }
+
+    .questions__item_phone:hover {
+        color: #b3021c;
+    }
+    
+    /*-----------media-------------*/
+    
+    @media (max-width: 380px) {
+        .questions__item_title {
+            font-size: 30px;
+        }
+
+        .questions__item_desc {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .br {
+            display: none;
+        }
+    }
+</style>
+
+<div class="questions">
+    <div class="questions__item container">
+        <h1 class="questions__item_title">Возникли вопросы?</h1>
+        <p class="questions__item_desc">Задайте их мне. Оставьте свой номер телефона и я <br class="br"> проконсультирую Вас по любому вопросу</p>
+        <a href="tel:+79187347481" class="questions__item_phone">+7 (918) 734-74-81</a>
+    </div>
+</div>
