@@ -1,0 +1,112 @@
+<style>
+    .companyDesc {
+        width: 100%;
+        min-height: 760px;
+        background: linear-gradient( rgb(30 30 30 / 80%), rgb(0 0 0 / 50%) ), url(/img/features-image.jpg) center no-repeat;
+        margin-top: 50px;
+        padding: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    .companyDesc__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .companyDesc__item {
+        max-width: 636px;
+        width: 100%;
+        min-height: 280px;
+        border: 2px solid #4c4c4c;
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    .companyDesc__item h1 {
+        text-align: left;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 500;
+        margin-top: 10px;
+
+    }
+
+    .companyDesc__item p {
+        color: #fff;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .companyDesc__item_img img {
+        max-width: 53px;
+        min-height: 53px;
+    }
+
+    .companyDesc__item_img span {
+        font-size: 5rem;
+        line-height: 1;
+        color: transparent;
+        font-family: math;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+        opacity: 0.5;
+    }
+
+    /*-----------media------------*/
+
+    @media(max-width: 1430px) {
+        .companyDesc__items {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media(max-width: 700px) {
+        .companyDesc__item {
+            margin-top: 20px;
+        }
+
+        .companyDesc__item {
+            min-height: 250px;
+        }
+    }
+
+</style>
+
+<div class="companyDesc">
+    <div class="companyDesc__items container">
+        <div class="companyDesc__item">
+            <div class="companyDesc__item_img">
+                <img src="/img/companyDesc-1-image.svg" alt="companyDesc">
+                <span>01</span>
+            </div>
+            <h1>Более 15 лет опыта</h1>
+            <p>Многолетний опыт работы, способствующий эффективной защите наших клиентов</p>
+        </div>
+        <div class="companyDesc__item">
+            <div class="companyDesc__item_img">
+                <img src="/img/companyDesc-2-image.svg" alt="companyDesc">
+                <span>02</span>
+            </div>
+            <h1>Более 90% выигранных дел</h1>
+            <p>У нас самый большой процент побед потому что мы умеем защищать наших клиентов</p>
+        </div>
+        <div class="companyDesc__item">
+            <div class="companyDesc__item_img">
+                <img src="/img/companyDesc-3-image.svg" alt="companyDesc">
+                <span>03</span>
+            </div>
+            <h1>68 клиента</h1>
+            <p>Многолетний опыт работы, способствующий эффективной защите наших клиентов</p>
+        </div>
+        <div class="companyDesc__item">
+            <div class="companyDesc__item_img">
+                <img src="/img/companyDesc-4-image.svg" alt="companyDesc">
+                <span>04</span>
+            </div>
+            <h1>Экономия</h1>
+            <p>Вы оплачиваете только реально проделанную работу</p>
+        </div>
+    </div>
+</div>
