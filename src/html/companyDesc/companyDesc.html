@@ -4,9 +4,9 @@
         min-height: 760px;
         background: linear-gradient( rgb(30 30 30 / 80%), rgb(0 0 0 / 50%) ), url(/img/features-image.jpg) center no-repeat;
         margin-top: 50px;
-        padding: 18px;
         display: flex;
         align-items: center;
+        padding-bottom: 20px;
     }
 
     .companyDesc__items {
@@ -55,18 +55,18 @@
 
     /*-----------media------------*/
 
-    @media(max-width: 1430px) {
+    @media(max-width: 1460px) {
         .companyDesc__items {
             flex-direction: column;
             align-items: center;
         }
+
+        .companyDesc__item {
+            margin-top: 30px;
+        }
     }
 
     @media(max-width: 700px) {
-        .companyDesc__item {
-            margin-top: 20px;
-        }
-
         .companyDesc__item {
             min-height: 250px;
         }
