@@ -139,9 +139,9 @@
 
     /*-------media--------*/
 
-    @media(max-width: 1130px) {
+    @media(max-width: 1220px) {
         .header_content {
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: start;
         }
 
@@ -153,25 +153,15 @@
             display: flex;
             gap: 0;
         }
-    }
 
-    @media(max-width: 1090px) {
         .header_content div:not(:first-child), button {
-            margin-top: 10px;
-        }
-
-        .header_content_logo img {
-            width: 25px;
-        }
-
-        .header_content {
-            flex-direction: column;
+            margin-top: 5px;
         }
     }
 
     @media(max-width: 915px) {
         .header_content_address_text a, .header_content_phone_desc a, .header_content_logo_desc p:last-child {
-            font-size: 16px;
+            font-size: 13px;
         }
     }
 
