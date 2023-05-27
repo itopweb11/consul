@@ -121,46 +121,22 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+    document.querySelector('.consultation__form_button').onclick = bor;
 
-    /*const token = "6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw";
-    const chat_id = "-1001669814655";
-    const url_api = `https://api.telegram.org/bot${ token }/sendMessage`*/
+    function bor () {
+        let name = document.querySelector('.consultation__form_name').value;
+        let phone = document.querySelector('.consultation__form_phone').value;
+        let desc = document.querySelector('.consultation__form_desc').value;
 
-        let arr = {
-            name: '',
-            phone: '',
-            desc: ''
-        }
+        let message = `<b>Заявка с сайта</b>\n`;
+        message += `<b>Имя: </b> ${name}\n`;
+        message += `<b>Телефон: </b> ${phone}\n`;
+        message += `<b>Комментарий: </b> ${desc}\n`;
 
-        document.querySelector('.consultation__form_button').onclick = bor;
-
-        function bor () {
-            let name = document.querySelector('.consultation__form_name').value;
-            let phone = document.querySelector('.consultation__form_phone').value;
-            let desc = document.querySelector('.consultation__form_desc').value;
-            arr.name = name
-            arr.phone = phone
-            arr.desc = desc
-            console.log(arr)
-
-          /*  axios.post(url_api, {
-                chat_id: chat_id,
-                parse_mode: 'html',
-                text: arr
-            })*/
-
-            let message = `<b>Заявка с сайта</b>\n`;
-            message += `<b>Имя: </b> ${name}\n`;
-            message += `<b>Телефон: </b> ${phone}\n`;
-            message += `<b>Комментарий: </b> ${desc}\n`;
-
-            axios.post('https://api.telegram.org/bot6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw/sendMessage', {
-                chat_id: '-1001669814655',
-                text: message,
-                parse_mode: 'html'
-            })
-                .then(() => {
-                    console.log('error')
-                })
-        }
+        axios.post('https://api.telegram.org/bot6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw/sendMessage', {
+            chat_id: '-1001669814655',
+            text: message,
+            parse_mode: 'html'
+        })
+    }
 </script>
