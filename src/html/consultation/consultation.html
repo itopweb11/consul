@@ -109,7 +109,7 @@
     <h1 class="consultation__title">Заказать консультацию</h1>
     <div class="consultation__form container">
         <div class="consultation__form_inputs">
-            <input class="consultation__form_name" name="name" type="text" placeholder="Ваше имя">
+            <input id="divA" class="consultation__form_name" name="name" type="text" placeholder="Ваше имя">
             <input class="consultation__form_phone" name="phone" type="number" placeholder="Ваш телефон">
             <button class="consultation__form_button desktop">отправить</button>
         </div>
@@ -118,6 +118,49 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-        const a =
+
+    /*const token = "6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw";
+    const chat_id = "-1001669814655";
+    const url_api = `https://api.telegram.org/bot${ token }/sendMessage`*/
+
+        let arr = {
+            name: '',
+            phone: '',
+            desc: ''
+        }
+
+        document.querySelector('.consultation__form_button').onclick = bor;
+
+        function bor () {
+            let name = document.querySelector('.consultation__form_name').value;
+            let phone = document.querySelector('.consultation__form_phone').value;
+            let desc = document.querySelector('.consultation__form_desc').value;
+            arr.name = name
+            arr.phone = phone
+            arr.desc = desc
+            console.log(arr)
+
+          /*  axios.post(url_api, {
+                chat_id: chat_id,
+                parse_mode: 'html',
+                text: arr
+            })*/
+
+            let message = `<b>Заявка с сайта</b>\n`;
+            message += `<b>Имя: </b> ${name}\n`;
+            message += `<b>Телефон: </b> ${phone}\n`;
+            message += `<b>Комментарий: </b> ${desc}\n`;
+
+            axios.post('https://api.telegram.org/bot6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw/sendMessage', {
+                chat_id: '-1001669814655',
+                text: message,
+                parse_mode: 'html'
+            })
+                .then(() => {
+                    console.log('error')
+                })
+        }
 </script>
