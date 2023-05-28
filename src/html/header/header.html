@@ -214,10 +214,12 @@
         opacity: 0;
         position: absolute;
         display: block;
-        margin: 5px -166px;
-        padding: 0;
+        margin: -33px -185px;
         transition: opacity 0.2s, visibility 0.2s;
         text-align: end;
+        background-color: #5f0614;
+        min-height: 253px;
+        padding-top: 7px;
     }
 
     .a {
@@ -228,6 +230,17 @@
     ul li:hover ul {
         visibility: visible;
         opacity: 1;
+    }
+
+    .ul:hover {
+        visibility: hidden;
+        opacity: 0!important;
+    }
+
+    .ul li a {
+        padding: 7px 15px;
+        font-size: 16px;
+        color: white;
     }
 
 
@@ -270,10 +283,10 @@
                             <span class="line"></span>
                         </a>
                         <ul class="ul">
-                            <li><a class="a" href="#">Главная</a></li>
-                            <li><a class="a" href="#">Общегражданские дела</a></li>
-                            <li><a class="a" href="#">Арбитраж</a></li>
-                            <li><a class="a" href="#">Контакты</a></li>
+                            <li class="li"><a class="a" href="#">Главная</a></li>
+                            <li class="li"><a class="a" href="#">Общегражданские дела</a></li>
+                            <li class="li"><a class="a" href="#">Арбитраж</a></li>
+                            <li class="li"><a class="a" href="#">Контакты</a></li>
                         </ul>
                     </li>
                 </ul>

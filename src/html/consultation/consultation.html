@@ -104,13 +104,8 @@
         }
     }
 
-    .error {
-        border: 2px solid red!important;
-    }
-
     .error::placeholder {
         color: red;
-        text-decoration: underline;
     }
 </style>
 
@@ -163,12 +158,10 @@
             document.querySelector('.consultation__form_phone').classList.remove("error");
         } else {
             console.log(phone.length)
-            !name ? document.querySelector('.consultation__form_name').classList.add("error")
-                : document.querySelector('.consultation__form_name').classList.remove("error");
-            !phone ?  document.querySelector('.consultation__form_phone').classList.add("error")
-                : document.querySelector('.consultation__form_phone').classList.remove("error");;
+            name ? document.querySelector('.consultation__form_name').classList.remove("error")
+                : document.querySelector('.consultation__form_name').classList.add("error");
+            phone ?  document.querySelector('.consultation__form_phone').classList.remove("error")
+                : document.querySelector('.consultation__form_phone').classList.add("error");;
         }
-
-
     }
 </script>
