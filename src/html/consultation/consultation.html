@@ -103,6 +103,15 @@
             font-size: 35px;
         }
     }
+
+    .error {
+        border: 2px solid red!important;
+    }
+
+    .error::placeholder {
+        color: red;
+        text-decoration: underline;
+    }
 </style>
 
 <div class="consultation">
@@ -110,7 +119,7 @@
     <div class="consultation__form container">
         <div class="consultation__form_inputs">
             <input class="consultation__form_name" name="name" type="text" placeholder="Ваше имя">
-            <input class="consultation__form_phone" name="phone" type="number" placeholder="Ваш телефон">
+            <input  class="consultation__form_phone" name="phone" type="number"  placeholder="+7 (___) ___-__-__">
             <button class="consultation__form_button desktop">отправить</button>
         </div>
         <input class="consultation__form_desc" name="message" type="text" placeholder="Ваше сообщение">
@@ -120,9 +129,9 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-    document.querySelector('.consultation__form_button').onclick = bor;
+    document.querySelector('.consultation__form_button').onclick = form;
 
-    function bor () {
+    function form () {
         let name = document.querySelector('.consultation__form_name').value;
         let phone = document.querySelector('.consultation__form_phone').value;
         let desc = document.querySelector('.consultation__form_desc').value;
@@ -132,10 +141,34 @@
         message += `<b>Телефон: </b> ${phone}\n`;
         message += `<b>Комментарий: </b> ${desc}\n`;
 
-        axios.post('https://api.telegram.org/bot6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw/sendMessage', {
-            chat_id: '-1001669814655',
-            text: message,
-            parse_mode: 'html'
-        })
+        if (name && phone) {
+            axios.post('https://api.telegram.org/bot6127491380:AAETysDdd5qODNPMDmKTVV-vSefc1Kj1imw/sendMessage', {
+                chat_id: '-1001669814655',
+                text: message,
+                parse_mode: 'html'
+            })
+                .then((res) =>{
+                    alert('Заявка отправлена')
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+                .finally(() =>{
+                    console.log('ok')
+                })
+            document.querySelector('.consultation__form_name').value = '';
+            document.querySelector('.consultation__form_phone').value = '';
+            document.querySelector('.consultation__form_desc').value = '';
+            document.querySelector('.consultation__form_name').classList.remove("error");
+            document.querySelector('.consultation__form_phone').classList.remove("error");
+        } else {
+            console.log(phone.length)
+            !name ? document.querySelector('.consultation__form_name').classList.add("error")
+                : document.querySelector('.consultation__form_name').classList.remove("error");
+            !phone ?  document.querySelector('.consultation__form_phone').classList.add("error")
+                : document.querySelector('.consultation__form_phone').classList.remove("error");;
+        }
+
+
     }
 </script>
