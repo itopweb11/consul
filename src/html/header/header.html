@@ -136,59 +136,10 @@
         background-color: #97182c;
     }
 
-
-    /*-------media--------*/
-
-    @media(max-width: 1220px) {
-        .header_content {
-            flex-direction: column;
-            justify-content: start;
-        }
-
-        .header_content_img {
-            display: none;
-        }
-
-        .header_content_logo, .header_content_address, .header_content_phone {
-            display: flex;
-            gap: 0;
-        }
-
-        .header_content div:not(:first-child), button {
-            margin-top: 5px;
-        }
-    }
-
-    @media(max-width: 915px) {
-        .header_content_address_text a, .header_content_phone_desc a, .header_content_logo_desc p:last-child {
-            font-size: 13px;
-        }
-    }
-
-    @media(max-width: 710px) {
-        .header_menu_data {
-            display: none;
-        }
-
-        .header_menu_data a {
-            padding: 10px;
-            margin-left: -10px;
-        }
-
-        nav {
-            display: block!important;
-        }
-    }
-
-
-
-
-
-
     .nav {
         position: absolute;
         top: 15px;
-        right: 0;
+        right: 5px;
         transform: translateX(-50%);
         display: inline-block;
         animation: slide-in 1s ease-out;
@@ -263,6 +214,50 @@
         height: 2px;
         width: 25px;
         background-color: #5f0614;
+    }
+
+
+    /*-------media--------*/
+
+    @media(max-width: 1220px) {
+        .header_content {
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .header_content_img {
+            display: none;
+        }
+
+        .header_content_logo, .header_content_address, .header_content_phone {
+            display: flex;
+            gap: 0;
+        }
+
+        .header_content div:not(:first-child), button {
+            margin-top: 5px;
+        }
+    }
+
+    @media(max-width: 915px) {
+        .header_content_address_text a, .header_content_phone_desc a, .header_content_logo_desc p:last-child {
+            font-size: 13px;
+        }
+    }
+
+    @media(max-width: 710px) {
+        .header_menu_data {
+            display: none;
+        }
+
+        .header_menu_data a {
+            padding: 10px;
+            margin-left: -10px;
+        }
+
+        nav {
+            display: block!important;
+        }
     }
 </style>
 
