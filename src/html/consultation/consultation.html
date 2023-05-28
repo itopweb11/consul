@@ -146,18 +146,17 @@
                     alert('Заявка отправлена')
                 })
                 .catch((err) => {
-                    console.log(err)
+                    console.log('error')
                 })
                 .finally(() =>{
                     console.log('ok')
                 })
-            document.querySelector('.consultation__form_name').value = '';
+            /*document.querySelector('.consultation__form_name').value = '';
             document.querySelector('.consultation__form_phone').value = '';
-            document.querySelector('.consultation__form_desc').value = '';
+            document.querySelector('.consultation__form_desc').value = '';*/
             document.querySelector('.consultation__form_name').classList.remove("error");
             document.querySelector('.consultation__form_phone').classList.remove("error");
         } else {
-            console.log(phone.length)
             name ? document.querySelector('.consultation__form_name').classList.remove("error")
                 : document.querySelector('.consultation__form_name').classList.add("error");
             phone ?  document.querySelector('.consultation__form_phone').classList.remove("error")
