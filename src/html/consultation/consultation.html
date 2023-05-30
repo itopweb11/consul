@@ -163,4 +163,13 @@
                 : document.querySelector('.consultation__form_phone').classList.add("error");
         }
     }
+
+    let btn = document.querySelector('.header_content_button')
+    let consultation = document.querySelector('.consultation')
+
+    function handleButtonClick() {
+        consultation.scrollIntoView({block: "center", behavior: "smooth"});
+    }
+
+    btn.addEventListener('click', handleButtonClick);
 </script>
