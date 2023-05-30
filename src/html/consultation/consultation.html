@@ -134,9 +134,9 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-    document.querySelector('.consultation__form_button').onclick = form;
+    //document.querySelector('.consultation__form_button').onclick = form;
 
-    function form () {
+    /*function form () {
         let name = document.querySelector('.consultation__form_name').value;
         let phone = document.querySelector('.consultation__form_phone').value;
         let desc = document.querySelector('.consultation__form_desc').value;
@@ -161,18 +161,18 @@
                 .finally(() =>{
                     console.log('ok');
                 })
-            /*document.querySelector('.consultation__form_name').value = '';
+            /!*document.querySelector('.consultation__form_name').value = '';
             document.querySelector('.consultation__form_phone').value = '';
-            document.querySelector('.consultation__form_desc').value = '';*/
-            /*document.querySelector('.consultation__form_name').classList.remove("error");
-            document.querySelector('.consultation__form_phone').classList.remove("error");*/
-        } /*else {
+            document.querySelector('.consultation__form_desc').value = '';*!/
+            /!*document.querySelector('.consultation__form_name').classList.remove("error");
+            document.querySelector('.consultation__form_phone').classList.remove("error");*!/
+        } /!*else {
             name ? document.querySelector('.consultation__form_name').classList.remove("error")
                 : document.querySelector('.consultation__form_name').classList.add("error");
             phone ?  document.querySelector('.consultation__form_phone').classList.remove("error")
                 : document.querySelector('.consultation__form_phone').classList.add("error");
-        }*/
-    }
+        }*!/
+    }*/
 
     let btn = document.querySelector('.header_content_button');
     let consultation = document.querySelector('.consultation');
