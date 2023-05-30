@@ -35,7 +35,6 @@
     }
 
     .consultation__form_desc {
-        max-width: 636px;
         width: 100%;
         min-height: 150px;
         padding: 0 20px;
@@ -80,6 +79,11 @@
         margin-top: 0;
     }
 
+    .consultation__form_desc_label {
+        max-width: 636px;
+        width: 100%;
+    }
+
     /*----------media------------*/
 
     @media(max-width: 700px) {
@@ -121,7 +125,7 @@
             </label>
             <button class="consultation__form_button desktop">отправить</button>
         </div>
-        <label>
+        <label class="consultation__form_desc_label">
             <input class="consultation__form_desc" name="message" type="text" placeholder="Ваше сообщение">
         </label>
         <button class="consultation__form_button mobil">отправить</button>
@@ -157,9 +161,9 @@
                 .finally(() =>{
                     console.log('ok');
                 })
-            document.querySelector('.consultation__form_name').value = '';
+            /*document.querySelector('.consultation__form_name').value = '';
             document.querySelector('.consultation__form_phone').value = '';
-            document.querySelector('.consultation__form_desc').value = '';
+            document.querySelector('.consultation__form_desc').value = '';*/
             document.querySelector('.consultation__form_name').classList.remove("error");
             document.querySelector('.consultation__form_phone').classList.remove("error");
         } else {
